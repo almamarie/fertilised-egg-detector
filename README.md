@@ -95,6 +95,26 @@ Make sure to deploy the output of `npm run build`
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
+
+
+## Seting up The Camera
+
+- add the v4l library
+  - wget http://www.linux-projects.org/listing/uv4l_repo/lrkey.asc -O - | sudo apt-key add -
+
+
+
+- Add the repository to your sources list. (Replace **buster** with your Raspbian release if different.)
+  - echo "deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/ buster main" | sudo tee /etc/apt/sources.list.d/uv4l.list
+- Update your package lists again:
+- Install UV4L along with the necessary modules for the Raspberry Pi camera:
+- bash
+
+<pre class="!overflow-visible" data-start="1253" data-end="1337"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre language-bash"><span>sudo apt-get install uv4l uv4l-raspicam uv4l-raspicam-extras uv4l-server
+</span></code></div></div></pre>
+
+
+
 ---
 
 Built with ❤️ using React Router.
