@@ -1,12 +1,1 @@
-{
-  "tfjsVersion": "1.3.1",
-  "tmVersion": "2.4.7",
-  "grayscale": true,
-  "imageSize": 96,
-  "packageVersion": "0.8.4-alpha2",
-  "packageName": "@teachablemachine/image",
-  "timeStamp": "2025-02-25T21:49:59.651Z",
-  "userMetadata": {},
-  "modelName": "Embedded Image",
-  "labels": ["fertilised", "unfertilised"]
-}
+{"tfjsVersion":"1.3.1","tmVersion":"2.4.7","packageVersion":"0.8.4-alpha2","packageName":"@teachablemachine/image","timeStamp":"2025-03-03T19:28:09.456Z","userMetadata":{},"modelName":"tm-my-image-model","labels":["fertilised","unfertilised"],"imageSize":224}

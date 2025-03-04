@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import * as tmImage from "@teachablemachine/image";
+import SnapshotPredictor from "./SnapshotPredictor";
 
 interface Prediction {
   className: string;
@@ -16,7 +17,7 @@ const TeachableMachineLocal = () => {
   const [maxPredictions, setMaxPredictions] = useState<number>(0);
   const [imageSrc, setImageSrc] = useState<string | null>(null);
 
-  const modelPath = "/model02/"; // Change this path if necessary
+  const modelPath = "/model/"; // Change this path if necessary
 
   const predictWebcam = async () => {
     try {
@@ -66,7 +67,7 @@ const TeachableMachineLocal = () => {
   ) => {
     webcam.update();
     await predict(webcam, model);
-    window.requestAnimationFrame(() => loop(webcam, model));
+    // window.requestAnimationFrame(() => loop(webcam, model));
   };
 
   const predict = async (
@@ -163,6 +164,8 @@ const TeachableMachineLocal = () => {
           <div id="img-prediction-container" style={{ marginTop: "10px" }} />
         </div>
       )}
+
+      <SnapshotPredictor />
     </div>
   );
 };
